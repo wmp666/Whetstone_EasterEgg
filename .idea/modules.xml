@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/WEE_3600safe/WEE_3600safe.iml" filepath="$PROJECT_DIR$/WEE_3600safe/WEE_3600safe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WEE_RestartExplorer/WEE_RestartExplorer.iml" filepath="$PROJECT_DIR$/WEE_RestartExplorer/WEE_RestartExplorer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WEE_ShowDesktop/WEE_ShowDesktop.iml" filepath="$PROJECT_DIR$/WEE_ShowDesktop/WEE_ShowDesktop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WEE_UHelper/WEE_UHelper.iml" filepath="$PROJECT_DIR$/WEE_UHelper/WEE_UHelper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Whetstone_EasterEgg.iml" filepath="$PROJECT_DIR$/.idea/Whetstone_EasterEgg.iml" />
+    </modules>
+  </component>
+</project>
