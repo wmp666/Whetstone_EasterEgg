@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="module" module-name="Whetstone" scope="PROVIDED" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="net.java.dev.jna.platform" level="project" />
   </component>
 </module>
