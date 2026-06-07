@@ -2,6 +2,7 @@ package com.wmp.whetstone.tools;
 
 import com.sun.jna.Library;
 import com.sun.jna.Native;
+import com.sun.jna.WString;
 import com.sun.jna.ptr.IntByReference;
 import com.wmp.PublicTools.CTInfo;
 
@@ -10,5 +11,5 @@ public interface SecurityGuard extends Library {
 
     double huoqudangqiankeyongneicun();
 
-    void fenpeisuoxuneicun(IntByReference val);
+    void fenpeisuoxuneicun(IntByReference val, WString str);
 }

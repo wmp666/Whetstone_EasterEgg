@@ -1,5 +1,6 @@
 package com.wmp.whetstone;
 
+import com.sun.jna.WString;
 import com.sun.jna.ptr.IntByReference;
 import com.wmp.PublicTools.CTInfo;
 import com.wmp.PublicTools.easter_egg_control.BasicEasterEggUnit;
@@ -19,7 +20,7 @@ public class EasterEggUnit extends BasicEasterEggUnit {
 
     @Override
     public String getVersion() {
-        return "1.0.0";
+        return "1.1.0";
     }
 
     @Override
@@ -29,7 +30,7 @@ public class EasterEggUnit extends BasicEasterEggUnit {
 
     @Override
     public String help() {
-        return "用于占用内存\n可以设置运行参数：[占用百分比(小数)]";
+        return "用于占用内存\n可用参数：占用百分比(小数), 存入的文字";
     }
 
     @Override
@@ -49,10 +50,10 @@ public class EasterEggUnit extends BasicEasterEggUnit {
         } catch (Exception e) {
             Log.trayIcon.displayMessage( "Windows 安全中心", "威胁占用内存大小获取失败", TrayIcon.MessageType.ERROR);
         }
-        zhanyong(i, j);
+        zhanyong(i, j, args.length>=2?args[1]:"磨刀石");
     }
 
-    private static void zhanyong(double i, double j) {
+    private static void zhanyong(double i, double j, String str) {
         if (j == 0) {
             Log.trayIcon.displayMessage("Windows 安全中心", "发现顽固威胁，无法结束已节省内存", TrayIcon.MessageType.ERROR);
             return;
@@ -60,9 +61,9 @@ public class EasterEggUnit extends BasicEasterEggUnit {
         try {
             System.out.println("可用内存：" + i + "MB");
             System.out.println("占用:" + i*j);
-            SecurityGuard.INSTANCE.fenpeisuoxuneicun(new IntByReference((int) (i*j)));
+            SecurityGuard.INSTANCE.fenpeisuoxuneicun(new IntByReference((int) (i*j)), new WString(str));
         } catch (Exception e) {
-            zhanyong(i, j>0.1?j-0.1:0);
+            zhanyong(i, j>0.1?j-0.1:0, str);
         }
     }
 
