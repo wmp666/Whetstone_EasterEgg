@@ -5,7 +5,7 @@ import com.wmp.PublicTools.UITools.CTColor;
 import com.wmp.PublicTools.UITools.CTFont;
 import com.wmp.PublicTools.UITools.CTFontSizeStyle;
 import com.wmp.PublicTools.UITools.GetIcon;
-import com.wmp.PublicTools.easter_egg_control.BasicEasterEggUnit;
+import com.wmp.PublicTools.easter_egg_control.easterEggUnit.BasicEasterEggUnit;
 import com.wmp.PublicTools.printLog.Log;
 import com.wmp.whetstone.extraPanel.classForm.panel.ClassFormPanel;
 
@@ -15,6 +15,8 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class EasterEggUnit extends BasicEasterEggUnit {
+
+    private final JDialog textFrame = new JDialog(new Frame(), "班主任");
 
     private Thread thread;
     @Override
@@ -71,12 +73,12 @@ public class EasterEggUnit extends BasicEasterEggUnit {
 
 
 
-        JDialog frame = new JDialog(new Frame(), "班主任");
-        frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-        frame.setUndecorated(true);
-        frame.setAlwaysOnTop(true);
-        frame.setBackground(new Color(0,0,0,0));
-        frame.addWindowListener(new WindowAdapter() {
+
+        textFrame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        textFrame.setUndecorated(true);
+        textFrame.setAlwaysOnTop(true);
+        textFrame.setBackground(new Color(0,0,0,0));
+        textFrame.addWindowListener(new WindowAdapter() {
             @Override
             public void windowOpened(WindowEvent e) {
                 new Thread(()->{
@@ -93,18 +95,18 @@ public class EasterEggUnit extends BasicEasterEggUnit {
         JLabel label = new JLabel(args[0]);
         label.setForeground(CTColor.mainColor);
         label.setFont(CTFont.getCTFont(Font.BOLD, CTFontSizeStyle.BIG));
-        frame.add(label);
+        textFrame.add(label);
 
-        ((JPanel)frame.getContentPane()).setOpaque(false);
+        ((JPanel)textFrame.getContentPane()).setOpaque(false);
 
-        frame.pack();
-        frame.setLocation((int) (100 * CTInfo.dpi), (int) (100 *CTInfo.dpi));
+        textFrame.pack();
+        textFrame.setLocation((int) (100 * CTInfo.dpi), (int) (100 *CTInfo.dpi));
 
-        frame.setVisible(true);
+        textFrame.setVisible(true);
     }
 
     @Override
     public void clear() {
-
+        textFrame.dispose();
     }
 }

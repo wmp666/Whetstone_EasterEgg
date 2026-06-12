@@ -1,6 +1,6 @@
 package com.wmp.whetstone;
 
-import com.wmp.PublicTools.easter_egg_control.BasicEasterEggUnit;
+import com.wmp.PublicTools.easter_egg_control.easterEggUnit.BasicEasterEggUnit;
 import com.wmp.whetstone.tools.windowsAPI.BlurGlassEffect;
 import com.wmp.whetstone.tools.windowsAPI.DesktopAppEnumerator;
 import com.wmp.whetstone.tools.windowsAPI.DisableGlassEffect;

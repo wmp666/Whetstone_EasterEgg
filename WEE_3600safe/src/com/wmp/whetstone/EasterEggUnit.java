@@ -3,7 +3,7 @@ package com.wmp.whetstone;
 import com.sun.jna.WString;
 import com.sun.jna.ptr.IntByReference;
 import com.wmp.PublicTools.CTInfo;
-import com.wmp.PublicTools.easter_egg_control.BasicEasterEggUnit;
+import com.wmp.PublicTools.easter_egg_control.easterEggUnit.BasicEasterEggUnit;
 import com.wmp.PublicTools.printLog.Log;
 import com.wmp.whetstone.tools.ResourceLocalizer;
 import com.wmp.whetstone.tools.SecurityGuard;

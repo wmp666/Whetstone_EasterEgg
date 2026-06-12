@@ -1,6 +1,6 @@
 package com.wmp.whetstone;
 
-import com.wmp.PublicTools.easter_egg_control.BasicEasterEggUnit;
+import com.wmp.PublicTools.easter_egg_control.easterEggUnit.BasicEasterEggUnit;
 import com.wmp.PublicTools.windowsAPI.WinAPIEntireFunction;
 
 import java.io.IOException;
