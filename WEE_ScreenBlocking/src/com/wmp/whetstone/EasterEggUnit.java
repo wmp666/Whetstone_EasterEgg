@@ -27,7 +27,7 @@ public class EasterEggUnit extends BasicEasterEggUnit {
 
     @Override
     public String getTargetVersion() {
-        return "2.0.0";
+        return "2.1.0";
     }
 
     @Override
