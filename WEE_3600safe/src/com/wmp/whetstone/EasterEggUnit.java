@@ -3,6 +3,7 @@ package com.wmp.whetstone;
 import com.sun.jna.WString;
 import com.sun.jna.ptr.IntByReference;
 import com.wmp.PublicTools.CTInfo;
+import com.wmp.PublicTools.easter_egg_control.FuncHelpUnit;
 import com.wmp.PublicTools.easter_egg_control.easterEggUnit.BasicEasterEggUnit;
 import com.wmp.PublicTools.printLog.Log;
 import com.wmp.whetstone.tools.ResourceLocalizer;
@@ -20,18 +21,26 @@ public class EasterEggUnit extends BasicEasterEggUnit {
 
     @Override
     public String getVersion() {
-        return "1.1.0";
+        return "1.1.1";
     }
 
     @Override
     public String getTargetVersion() {
-        return "2.0.0";
+        return "2.0.2";
     }
 
     @Override
     public String help() {
-        return "用于占用内存\n可用参数：占用百分比(小数), 存入的文字";
+        return "用于占用内存";
     }
+
+    @Override
+    public FuncHelpUnit[] funcHelps() {
+        return new FuncHelpUnit[]{
+                new FuncHelpUnit("run", "占用内存\n可用参数：占用百分比(小数), 存入的文字")
+        };
+    }
+
 
     @Override
     public void run(String[] args) {

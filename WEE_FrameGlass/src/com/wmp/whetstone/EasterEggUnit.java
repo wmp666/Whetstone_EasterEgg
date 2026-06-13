@@ -1,5 +1,6 @@
 package com.wmp.whetstone;
 
+import com.wmp.PublicTools.easter_egg_control.FuncHelpUnit;
 import com.wmp.PublicTools.easter_egg_control.easterEggUnit.BasicEasterEggUnit;
 import com.wmp.whetstone.tools.windowsAPI.BlurGlassEffect;
 import com.wmp.whetstone.tools.windowsAPI.DesktopAppEnumerator;
@@ -16,17 +17,24 @@ public class EasterEggUnit extends BasicEasterEggUnit {
 
     @Override
     public String getVersion() {
-        return "1.0.0";
+        return "1.0.1";
     }
 
     @Override
     public String getTargetVersion() {
-        return "2.0.0";
+        return "2.0.2";
     }
 
     @Override
     public String help() {
-        return "在一段时间内,使所有窗口透明\n可用参数:最长等待时间(保底1分钟)(min), 间隔时间(s), 循环次数";
+        return "在一段时间内,使所有窗口透明";
+    }
+
+    @Override
+    public FuncHelpUnit[] funcHelps() {
+        return new FuncHelpUnit[]{
+                new FuncHelpUnit("run", "使所有窗口透明\n可用参数:最长等待时间(保底1分钟)(min), 间隔时间(s), 循环次数")
+        };
     }
 
     @Override

@@ -2,6 +2,7 @@ package com.wmp.whetstone;
 
 import com.wmp.PublicTools.CTInfo;
 import com.wmp.PublicTools.UITools.GetIcon;
+import com.wmp.PublicTools.easter_egg_control.FuncHelpUnit;
 import com.wmp.PublicTools.easter_egg_control.easterEggUnit.BasicEasterEggUnit;
 import com.wmp.PublicTools.printLog.Log;
 import com.wmp.whetstone.extraPanel.classForm.panel.ClassFormPanel;
@@ -23,17 +24,24 @@ public class EasterEggUnit extends BasicEasterEggUnit {
 
     @Override
     public String getVersion() {
-        return "1.0.0";
+        return "1.0.1";
     }
 
     @Override
     public String getTargetVersion() {
-        return "2.0.0";
+        return "2.0.2";
     }
 
     @Override
     public String help() {
         return "锤子!\n可用参数:error";
+    }
+
+    @Override
+    public FuncHelpUnit[] funcHelps() {
+        return new FuncHelpUnit[]{
+                new FuncHelpUnit("run", "error")
+        };
     }
 
     @Override
