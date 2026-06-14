@@ -6,8 +6,8 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
-    <orderEntry type="library" name="net.java.dev.jna.platform" level="project" />
     <orderEntry type="module" module-name="Whetstone" scope="PROVIDED" />
+    <orderEntry type="library" scope="PROVIDED" name="net.java.dev.jna.platform" level="project" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

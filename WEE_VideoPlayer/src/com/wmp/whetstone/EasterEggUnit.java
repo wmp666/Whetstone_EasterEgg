@@ -1,7 +1,8 @@
 package com.wmp.whetstone;
 
 import com.wmp.PublicTools.CTInfo;
-import com.wmp.PublicTools.easter_egg_control.easterEggUnit.BasicEasterEggUnit;
+import com.wmp.PublicTools.easter_egg_control.FuncHelpUnit;
+import com.wmp.PublicTools.easter_egg_control.easterEggUnit.JarDevelopEasterEggUnit;
 import com.wmp.PublicTools.printLog.Log;
 import com.wmp.whetstone.extraPanel.classForm.panel.ClassFormPanel;
 import com.wmp.whetstone.tools.ResourceLocalizer;
@@ -9,7 +10,7 @@ import com.wmp.whetstone.tools.ResourceLocalizer;
 import java.io.File;
 import java.util.Random;
 
-public class EasterEggUnit extends BasicEasterEggUnit {
+public class EasterEggUnit extends JarDevelopEasterEggUnit {
 
     private Thread thread;
     @Override
@@ -19,21 +20,28 @@ public class EasterEggUnit extends BasicEasterEggUnit {
 
     @Override
     public String getVersion() {
-        return "1.0.0";
+        return "1.0.2";
     }
 
     @Override
     public String getTargetVersion() {
-        return "2.1.0";
+        return "2.2.0";
     }
 
     @Override
     public String help() {
-        return "用于播放随机的一个视频\n输入参数: 无";
+        return "用于播放随机的一个视频";
     }
 
     @Override
-    public void run(String[] args) {
+    public FuncHelpUnit[] funcHelps() {
+        return new FuncHelpUnit[]{
+                new FuncHelpUnit("videoPlayer", "用于播放随机的一个视频\n输入参数: 无")
+        };
+    }
+
+
+    public void videoPlayer(String[] args){
         String[] choices = {"sjz", "ys", "zmd" ,"cs", "bt"};
 
         ResourceLocalizer.copyEmbeddedFile(CTInfo.TEMP_PATH + "\\Whetstone\\", "/resource/", "VideoPlayer.exe");
@@ -61,7 +69,7 @@ public class EasterEggUnit extends BasicEasterEggUnit {
     }
 
     @Override
-    public void clear() {
+    public void clear(String funcName) {
 
     }
 }
